@@ -11,10 +11,10 @@ const SinglePost = (props) => {
     const [comment, setComment] = useState('')
     const { user } = useContext(AuthContext)
     const commentInputRef = useRef(null)
-    
-    
+
+
     const { data, loading } = useQuery(FETCH_SINGLE_POST, {
-              variables: {
+        variables: {
             postId
         }
     })
@@ -24,7 +24,7 @@ const SinglePost = (props) => {
         update() {
             commentInputRef.current.blur()
             setComment('')
-         },
+        },
         variables: {
             postId,
             body: comment
@@ -111,7 +111,7 @@ const SinglePost = (props) => {
                         )
                     }
                     {comments.map(comment => (
-                        
+
                         <Card fluid key={comment.id} >
                             <Card.Content>
                                 {user && user.username === comment.username && (
@@ -154,15 +154,7 @@ query($postId: ID!){
     }
 }
 `
-const CREATE_POST = gql`
-mutation  createPost($body: String!) {
-      createPost(body: $body) {
-    id
-    body
-    username
-      }
-  }
-`
+
 
 const SUBMIT_COMMENT = gql`
 mutation createComment($postId: ID! , $body: String!){

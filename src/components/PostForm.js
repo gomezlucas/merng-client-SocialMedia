@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Form, Button, Transition } from 'semantic-ui-react'
 import { useForm } from '../utils/hooks'
 import { gql, useMutation } from '@apollo/client'
-import { AuthContext } from '../context/auth'
-
 
 const PostForm = () => {
  

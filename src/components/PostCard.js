@@ -11,10 +11,7 @@ const PostCard = ({ post }, props) => {
     const { user } = useContext(AuthContext)
     const { body, created_at, username, likes, likeCount, commentCount, id } = post
 
-    const commentPost = (id) => {
-        console.log('commment')
-    }
-
+   
     return (
 
         <Card fluid >

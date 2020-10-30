@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Grid, Image } from 'semantic-ui-react'
+import { Grid } from 'semantic-ui-react'
 import { gql, useQuery } from '@apollo/client'
 import PostCard from './../components/PostCard';
 import { AuthContext } from '../context/auth'
